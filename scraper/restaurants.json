@@ -1,0 +1,28 @@
+{
+  "restaurants": [
+    {
+      "id": "eatery-garden",
+      "name": "Eatery Garden Sundbyberg",
+      "url": "https://eatery.se/garden-sundbyberg",
+      "address": "Landsvägen 50A, 172 63 Sundbyberg",
+      "lat": 59.3608,
+      "lon": 17.9689
+    },
+    {
+      "id": "ristorante-parma",
+      "name": "Ristorante Parma",
+      "url": "https://ristoranteparma.se",
+      "address": "Sturegatan 32, 172 31 Sundbyberg",
+      "lat": 59.3612,
+      "lon": 17.9658
+    },
+    {
+      "id": "kitchin-sundbyberg",
+      "name": "Kitchin by Kasai",
+      "url": "https://kitchin.se/signalfabriken-sundbyberg",
+      "address": "Ursviksvägen 6, 172 66 Sundbyberg",
+      "lat": 59.3627,
+      "lon": 17.9742
+    }
+  ]
+}
