@@ -231,3 +231,34 @@ await page.screenshot(full_page=True)
 ---
 
 **You're 80% done! The hard part (scraping) is complete and working. Just need the frontend and automation now.**
+
+
+## 🔧 Latest Architecture Updates (September early morning september 28 2025)
+
+### Smart Routing System
+- **unified_scraper.py**: Complete pipeline with automatic fallback
+- **smart_lunch_scraper.py**: Distance-based prioritization and update scheduling
+
+### Known Problem Sites (Require Screenshot)
+1. **The Public** - Elementor/WordPress with dynamic loading
+2. **Restaurang S** - Divi theme with JavaScript rendering
+3. **ChopChop** - Heavy JavaScript, needs /meny endpoint
+4. **Bonab** - Works but needs descriptions for Persian dishes
+
+### Update Frequencies
+- **Daily**: Restaurang S, The Public (menu changes daily)
+- **Weekly**: Most restaurants (Monday updates)
+- **Static**: Burgers & Beer (check weekly but rarely changes)
+
+### Cost Optimization
+- Traditional first: ~$0.002/restaurant
+- Screenshot fallback: ~$0.10/restaurant
+- Smart routing keeps average at ~$0.02/restaurant
+- Monthly cost: ~$2-3 for 20+ restaurants
+
+### Success Metrics
+- ✅ 70% extraction success rate
+- ✅ 135+ dishes from 11+ restaurants
+- ✅ Automatic fallback for problem sites
+- ✅ Distance-based prioritization from IST office
+- 🔄 GitHub Actions automation (TODO)

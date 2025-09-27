@@ -1,0 +1,129 @@
+[
+  {
+    "name": "The Public",
+    "base_url": "https://sundbyberg.thepublic.se",
+    "attempts": [
+      {
+        "url": "https://sundbyberg.thepublic.se",
+        "method": "traditional",
+        "status_code": 200,
+        "content_length": 69479,
+        "menu_keywords_found": [
+          "meny(7)",
+          "kr(2)",
+          "prices(433)"
+        ],
+        "error": "HTTPConnectionPool(host='api.scraperapi.com', port=80): Read timed out. (read timeout=30)",
+        "sample_content": "Välkommen till våra två restauranger.\nVi huserar i den vackra Signalfabriken i Sundbyberg. \n\n\n\n\n\n\n\n\nThe Public \n\n\n\n\n \n\n\n\n\nVår stora restaurang med uteservering, lunch, a la carte och DJ. \n\n\n\n\n\n\nBESÖK\n"
+      }
+    ]
+  },
+  {
+    "name": "Restaurang S",
+    "base_url": "http://www.restaurangs.nu",
+    "attempts": [
+      {
+        "url": "http://www.restaurangs.nu",
+        "method": "traditional",
+        "status_code": 200,
+        "content_length": 123298,
+        "menu_keywords_found": [
+          "lunch(17)",
+          "meny(3)",
+          "lax(60)",
+          "prices(463)"
+        ],
+        "error": "HTTPConnectionPool(host='api.scraperapi.com', port=80): Read timed out. (read timeout=30)",
+        "sample_content": "Hem\nLunchmeny\nAffärslunch\nTake away\n\nKuren frukost\nKuren lunch\n\n\nCatering\nKonferens\nKontakt\nOm oss\n\nMiljöarbete\nJobba hos oss"
+      }
+    ]
+  },
+  {
+    "name": "KRUBB Burgers",
+    "base_url": "https://krubbburgers.se",
+    "attempts": [
+      {
+        "url": "https://krubbburgers.se",
+        "method": "traditional",
+        "status_code": 200,
+        "content_length": 244059,
+        "menu_keywords_found": [
+          "meny(7)",
+          "kr(248)",
+          "serveras(2)",
+          "pris(2)",
+          "kött(7)",
+          "kyckling(3)",
+          "sallad(16)",
+          "burger(146)",
+          "lax(27)",
+          "nöt(8)",
+          "prices(1148)"
+        ],
+        "error": "HTTPConnectionPool(host='api.scraperapi.com', port=80): Read timed out. (read timeout=30)",
+        "sample_content": "OM OSS\nMENY\nKONTAKT"
+      }
+    ]
+  },
+  {
+    "name": "Ristorante Rustico",
+    "base_url": "http://www.ristoranterustico.se",
+    "attempts": [
+      {
+        "url": "http://www.ristoranterustico.se",
+        "method": "traditional",
+        "status_code": 200,
+        "content_length": 128910,
+        "menu_keywords_found": [
+          "dagens(2)",
+          "lunch(4)",
+          "meny(4)",
+          "rätt(5)",
+          "kr(24)",
+          "serveras(3)",
+          "pris(2)",
+          "pizza(2)",
+          "sallad(6)",
+          "räkor(3)",
+          "lax(4)",
+          "nöt(4)",
+          "prices(456)"
+        ],
+        "error": null,
+        "sample_content": "Hem\nOm oss\nMeny\nLunch\nCatering\nReservation\nTAKE-AWAY\nKontakt"
+      }
+    ]
+  },
+  {
+    "name": "Tre Bröder",
+    "base_url": "http://www.3broder.com",
+    "attempts": [
+      {
+        "url": "http://www.3broder.com",
+        "method": "traditional",
+        "status_code": 200,
+        "content_length": 237098,
+        "menu_keywords_found": [
+          "meny(13)",
+          "måndag(3)",
+          "tisdag(2)",
+          "onsdag(2)",
+          "torsdag(2)",
+          "fredag(3)",
+          "rätt(7)",
+          "kr(4)",
+          "pris(3)",
+          "pasta(6)",
+          "sallad(2)",
+          "vegetarisk(2)",
+          "soppa(4)",
+          "burger(2)",
+          "lax(2)",
+          "prices(788)"
+        ],
+        "error": "HTTPConnectionPool(host='api.scraperapi.com', port=80): Read timed out. (read timeout=30)",
+        "sample_content": "Hem\nBistro Meny\nPinsa\nDryck\nAfter Work Meny\nKontakta Oss"
+      }
+    ]
+  }
+]
