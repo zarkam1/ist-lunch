@@ -59,25 +59,6 @@
       "category": "restaurang"
     },
     {
-      "id": "bonab---persisk-restaurang-stockholm",
-      "name": "Bonab - Persisk Restaurang Stockholm",
-      "address": "Järnvägsgatan 50",
-      "website": "http://bonabgrill.se/",
-      "rating": 4.6,
-      "review_count": 1178,
-      "price_level": 2,
-      "lat": 59.3636017,
-      "lon": 17.9637579,
-      "walk_time_min": 10,
-      "types": [
-        "establishment",
-        "food",
-        "point_of_interest",
-        "restaurant"
-      ],
-      "category": "restaurang"
-    },
-    {
       "id": "restaurang-parma",
       "name": "Restaurang Parma",
       "address": "Tulegatan 56",
@@ -118,6 +99,25 @@
       "category": "restaurang"
     },
     {
+      "id": "restaurang-s",
+      "name": "Restaurang S",
+      "address": "Röntgenvägen 2",
+      "website": "http://www.restaurangs.nu/",
+      "rating": 4.4,
+      "review_count": 888,
+      "price_level": 2,
+      "lat": 59.35693819999999,
+      "lon": 17.9769587,
+      "walk_time_min": 9,
+      "types": [
+        "establishment",
+        "food",
+        "point_of_interest",
+        "restaurant"
+      ],
+      "category": "restaurang"
+    },
+    {
       "id": "piatti",
       "name": "Piatti",
       "address": "Tulegatan 10",
@@ -138,16 +138,36 @@
       "category": "restaurang"
     },
     {
-      "id": "krubb-burgers---sundbyberg",
-      "name": "KRUBB Burgers - Sundbyberg",
-      "address": "Sturegatan 11",
-      "website": "https://krubbburgers.se/?utm_source=google",
-      "rating": 4.5,
-      "review_count": 796,
+      "id": "bra-mat",
+      "name": "Bra Mat",
+      "address": "Tulegatan 54",
+      "website": "http://www.bramat.nu/",
+      "rating": 4.4,
+      "review_count": 750,
       "price_level": 2,
-      "lat": 59.3616796,
-      "lon": 17.9721894,
-      "walk_time_min": 1,
+      "lat": 59.36764290000001,
+      "lon": 17.966627,
+      "walk_time_min": 10,
+      "types": [
+        "establishment",
+        "food",
+        "point_of_interest",
+        "restaurant",
+        "store"
+      ],
+      "category": "restaurang"
+    },
+    {
+      "id": "villa-wera",
+      "name": "Villa Wera",
+      "address": "Vretenvägen 13",
+      "website": "http://villawera.se/",
+      "rating": 4.3,
+      "review_count": 688,
+      "price_level": 2,
+      "lat": 59.3540073,
+      "lon": 17.9742479,
+      "walk_time_min": 10,
       "types": [
         "establishment",
         "food",
@@ -157,45 +177,22 @@
       "category": "restaurang"
     },
     {
-      "id": "grona-stugan",
-      "name": "Gröna Stugan",
-      "address": "Ursviksvägen 28",
-      "website": "http://www.gronastugan.se/",
-      "rating": 3.9,
-      "review_count": 954,
-      "price_level": 2,
-      "lat": 59.3725846,
-      "lon": 17.9646928,
-      "walk_time_min": 17,
-      "types": [
-        "cafe",
-        "establishment",
-        "food",
-        "point_of_interest",
-        "restaurant",
-        "store"
-      ],
-      "category": "café"
-    },
-    {
-      "id": "lilla-rott",
-      "name": "Lilla Rött",
-      "address": "Tulegatan 5",
-      "website": "http://www.lillarottsundbyberg.se/",
+      "id": "tre-broder",
+      "name": "Tre Bröder",
+      "address": "Landsvägen 43",
+      "website": "http://www.3broder.com/",
       "rating": 4,
-      "review_count": 818,
+      "review_count": 753,
       "price_level": 2,
-      "lat": 59.3639422,
-      "lon": 17.9771386,
-      "walk_time_min": 8,
+      "lat": 59.3608744,
+      "lon": 17.9697912,
+      "walk_time_min": 2,
       "types": [
+        "bar",
         "establishment",
         "food",
-        "meal_delivery",
-        "meal_takeaway",
         "point_of_interest",
-        "restaurant",
-        "store"
+        "restaurant"
       ],
       "category": "restaurang"
     },
@@ -220,23 +217,23 @@
       "category": "café"
     },
     {
-      "id": "restaurant-lotus",
-      "name": "Restaurant Lotus",
-      "address": "Stationsgatan 1",
-      "website": "https://www.restaurantlotus.se/",
-      "rating": 3.6,
-      "review_count": 695,
-      "price_level": 2,
-      "lat": 59.36229480000001,
-      "lon": 17.9690486,
-      "walk_time_min": 3,
+      "id": "hongthai",
+      "name": "Hongthai",
+      "address": "Ankdammsgatan 19",
+      "website": "http://hongthai.se/",
+      "rating": 4.1,
+      "review_count": 570,
+      "price_level": 1,
+      "lat": 59.3556471,
+      "lon": 17.9886473,
+      "walk_time_min": 24,
       "types": [
         "establishment",
         "food",
         "point_of_interest",
         "restaurant"
       ],
-      "category": "restaurang"
+      "category": "asian"
     },
     {
       "id": "eatery-garden-sundbyberg",
@@ -251,25 +248,6 @@
       "walk_time_min": 0,
       "types": [
         "bar",
-        "establishment",
-        "food",
-        "point_of_interest",
-        "restaurant"
-      ],
-      "category": "restaurang"
-    },
-    {
-      "id": "fagelboet",
-      "name": "Fågelboet",
-      "address": "Tulegatan 14",
-      "website": "http://www.restaurangfagelboet.se/",
-      "rating": 4.3,
-      "review_count": 448,
-      "price_level": 2,
-      "lat": 59.36539390000001,
-      "lon": 17.9750176,
-      "walk_time_min": 7,
-      "types": [
         "establishment",
         "food",
         "point_of_interest",
@@ -298,6 +276,45 @@
         "restaurant"
       ],
       "category": "asian"
+    },
+    {
+      "id": "picoteo-sundbyberg",
+      "name": "Picoteo Sundbyberg",
+      "address": "Järnvägsgatan 32",
+      "website": "http://www.picoteo.se/",
+      "rating": 4.1,
+      "review_count": 479,
+      "price_level": 2,
+      "lat": 59.36221759999999,
+      "lon": 17.9681021,
+      "walk_time_min": 4,
+      "types": [
+        "establishment",
+        "food",
+        "point_of_interest",
+        "restaurant"
+      ],
+      "category": "restaurang"
+    },
+    {
+      "id": "bazaar",
+      "name": "Bazaar",
+      "address": "Landsvägen 51",
+      "website": "http://www.restaurangbazaar.com/",
+      "rating": 4.5,
+      "review_count": 396,
+      "price_level": 2,
+      "lat": 59.36118879999999,
+      "lon": 17.9683928,
+      "walk_time_min": 3,
+      "types": [
+        "bar",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "restaurant"
+      ],
+      "category": "restaurang"
     },
     {
       "id": "juniper-tree-café---rasunda",
@@ -377,25 +394,6 @@
         "restaurant"
       ],
       "category": "asian"
-    },
-    {
-      "id": "the-ruccola-solna",
-      "name": "The Ruccola Solna",
-      "address": "Anderstorpsvägen 16",
-      "website": "http://www.theruccola.se/",
-      "rating": 4.2,
-      "review_count": 358,
-      "price_level": 2,
-      "lat": 59.3505381,
-      "lon": 17.9825965,
-      "walk_time_min": 20,
-      "types": [
-        "establishment",
-        "food",
-        "point_of_interest",
-        "restaurant"
-      ],
-      "category": "restaurang"
     }
   ]
 }

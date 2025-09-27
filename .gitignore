@@ -1,11 +1,24 @@
-@"
-node_modules/
-venv/
-.env
+﻿# Python
 __pycache__/
 *.pyc
+venv/
+.env
+
+# Node/Frontend  
+node_modules/
+.next/
+.env.local
+
+# Data files
+scraper/data/
+scraper/debug/
+scraper/menus_today.json
+scraper/hybrid_menu_results.json
+scraper/filtered_restaurants.json
+
+# IDE
 .vscode/
-data/screenshots/*.png
-data/*.json
-!data/sample.json
-"@ | Set-Content .gitignore
+
+# OS
+.DS_Store
+Thumbs.db
