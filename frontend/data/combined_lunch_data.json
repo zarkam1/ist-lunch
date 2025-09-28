@@ -1,0 +1,1046 @@
+{
+  "generated_at": "2025-09-28T15:21:52.046747",
+  "total_dishes": 110,
+  "total_restaurants": 12,
+  "source": "Combined from all scraping efforts",
+  "restaurant_counts": {
+    "Lilla Rött": 15,
+    "Fågelboet": 1,
+    "Klå Fann Thai | Thairestaurang i Solna, Sundbyberg": 15,
+    "Restaurant Lotus": 2,
+    "The Public": 16,
+    "Cafe Boulevard - Konditori & Catering - Sundbyberg": 6,
+    "KRUBB Burgers - Sundbyberg": 15,
+    "Delibruket Flatbread": 15,
+    "Restaurang S": 4,
+    "Unknown": 1,
+    "KRUBB Burgers": 16,
+    "Ristorante Rustico": 4
+  },
+  "dishes": [
+    {
+      "name": "Orange Chicken & Thai Tofu",
+      "price": 122,
+      "category": "Asiatiskt",
+      "restaurant": "Lilla Rött",
+      "restaurant_type": "Restaurant",
+      "address": "Tulegatan 5",
+      "website": "http://www.lillarottsundbyberg.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Orange Chicken & Thai Tofu",
+      "price": 122,
+      "category": "Asiatiskt",
+      "restaurant": "Fågelboet",
+      "restaurant_type": "Restaurant",
+      "address": "Tulegatan 14",
+      "website": "http://www.restaurangfagelboet.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Orange Chicken & Thai Tofu",
+      "price": 122,
+      "category": "Asiatiskt",
+      "restaurant": "Klå Fann Thai | Thairestaurang i Solna, Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Ekensbergsvägen 97",
+      "website": "http://www.nyaklafannthai.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Thai Green Curry",
+      "price": 145,
+      "category": "Asiatiskt",
+      "restaurant": "Lilla Rött",
+      "restaurant_type": "Restaurant",
+      "address": "Tulegatan 5",
+      "website": "http://www.lillarottsundbyberg.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Fried Rice",
+      "price": 145,
+      "category": "Asiatiskt",
+      "restaurant": "Klå Fann Thai | Thairestaurang i Solna, Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Ekensbergsvägen 97",
+      "website": "http://www.nyaklafannthai.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Lunchbuffé",
+      "price": 145,
+      "category": "Buffet",
+      "restaurant": "Restaurant Lotus",
+      "restaurant_type": "Restaurant",
+      "address": "Stationsgatan 1",
+      "website": "https://www.restaurantlotus.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Buffet Selection",
+      "price": 165,
+      "category": "Buffet",
+      "restaurant": "Lilla Rött",
+      "restaurant_type": "Restaurant",
+      "address": "Tulegatan 5",
+      "website": "http://www.lillarottsundbyberg.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Hot Pot-lunch",
+      "price": 288,
+      "category": "Buffet",
+      "restaurant": "Restaurant Lotus",
+      "restaurant_type": "Restaurant",
+      "address": "Stationsgatan 1",
+      "website": "https://www.restaurantlotus.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "THE PUBLIC BURGARE",
+      "price": 210,
+      "category": "Burgare",
+      "restaurant": "The Public",
+      "restaurant_type": "Restaurant",
+      "address": "Esplanaden 10",
+      "website": "https://sundbyberg.thepublic.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "BBQ PULLED BEEF BURGARE",
+      "price": 210,
+      "category": "Burgare",
+      "restaurant": "The Public",
+      "restaurant_type": "Restaurant",
+      "address": "Esplanaden 10",
+      "website": "https://sundbyberg.thepublic.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Lax / Räkor / Skagenröra",
+      "price": 119,
+      "category": "Fisk",
+      "restaurant": "Cafe Boulevard - Konditori & Catering - Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Esplanaden 17",
+      "website": "https://cafeboulevard.se/?utm_source=google",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "FISKBURGARE",
+      "price": 140,
+      "category": "Fisk",
+      "restaurant": "KRUBB Burgers - Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Sturegatan 11",
+      "website": "https://krubbburgers.se/?utm_source=google",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Grilled Salmon with Dill Sauce",
+      "price": 145,
+      "category": "Fisk",
+      "restaurant": "Lilla Rött",
+      "restaurant_type": "Restaurant",
+      "address": "Tulegatan 5",
+      "website": "http://www.lillarottsundbyberg.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Fish Tacos",
+      "price": 145,
+      "category": "Fisk",
+      "restaurant": "Lilla Rött",
+      "restaurant_type": "Restaurant",
+      "address": "Tulegatan 5",
+      "website": "http://www.lillarottsundbyberg.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "CITRONBAKAD FÄNKÅL",
+      "price": 145,
+      "category": "Förrätter",
+      "restaurant": "The Public",
+      "restaurant_type": "Restaurant",
+      "address": "Esplanaden 10",
+      "website": "https://sundbyberg.thepublic.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "RÖDBETSTARTAR",
+      "price": 165,
+      "category": "Förrätter",
+      "restaurant": "The Public",
+      "restaurant_type": "Restaurant",
+      "address": "Esplanaden 10",
+      "website": "https://sundbyberg.thepublic.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "VITVINS BLANCHERAD VIT SPARRIS",
+      "price": 185,
+      "category": "Förrätter",
+      "restaurant": "The Public",
+      "restaurant_type": "Restaurant",
+      "address": "Esplanaden 10",
+      "website": "https://sundbyberg.thepublic.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "KLASSISK TOAST SKAGEN",
+      "price": 190,
+      "category": "Förrätter",
+      "restaurant": "The Public",
+      "restaurant_type": "Restaurant",
+      "address": "Esplanaden 10",
+      "website": "https://sundbyberg.thepublic.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "LÖJROM MED TOAST",
+      "price": 215,
+      "category": "Förrätter",
+      "restaurant": "The Public",
+      "restaurant_type": "Restaurant",
+      "address": "Esplanaden 10",
+      "website": "https://sundbyberg.thepublic.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "KYCKLINGBURGARE",
+      "price": 145,
+      "category": "Kyckling",
+      "restaurant": "KRUBB Burgers - Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Sturegatan 11",
+      "website": "https://krubbburgers.se/?utm_source=google",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Chicken Caesar Salad",
+      "price": 145,
+      "category": "Kyckling",
+      "restaurant": "Lilla Rött",
+      "restaurant_type": "Restaurant",
+      "address": "Tulegatan 5",
+      "website": "http://www.lillarottsundbyberg.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Green Curry",
+      "price": 145,
+      "category": "Kyckling",
+      "restaurant": "Klå Fann Thai | Thairestaurang i Solna, Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Ekensbergsvägen 97",
+      "website": "http://www.nyaklafannthai.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Thai Basil Chicken",
+      "price": 145,
+      "category": "Kyckling",
+      "restaurant": "Klå Fann Thai | Thairestaurang i Solna, Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Ekensbergsvägen 97",
+      "website": "http://www.nyaklafannthai.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "BBQ Kyckling",
+      "price": 187,
+      "category": "Kyckling",
+      "restaurant": "Delibruket Flatbread",
+      "restaurant_type": "Restaurant",
+      "address": "Bergsgatan 1",
+      "website": "http://www.flatbread.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Smörgås med ost och skinka",
+      "price": 50,
+      "category": "Kött",
+      "restaurant": "Cafe Boulevard - Konditori & Catering - Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Esplanaden 17",
+      "website": "https://cafeboulevard.se/?utm_source=google",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Smörgås med kalkon och ost",
+      "price": 50,
+      "category": "Kött",
+      "restaurant": "Cafe Boulevard - Konditori & Catering - Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Esplanaden 17",
+      "website": "https://cafeboulevard.se/?utm_source=google",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Salamismörgås",
+      "price": 50,
+      "category": "Kött",
+      "restaurant": "Cafe Boulevard - Konditori & Catering - Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Esplanaden 17",
+      "website": "https://cafeboulevard.se/?utm_source=google",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Leverpastejssmörgås",
+      "price": 50,
+      "category": "Kött",
+      "restaurant": "Cafe Boulevard - Konditori & Catering - Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Esplanaden 17",
+      "website": "https://cafeboulevard.se/?utm_source=google",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "BARNMENY",
+      "price": 75,
+      "category": "Kött",
+      "restaurant": "KRUBB Burgers - Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Sturegatan 11",
+      "website": "https://krubbburgers.se/?utm_source=google",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "ORIGINAL BURGARE",
+      "price": 105,
+      "category": "Kött",
+      "restaurant": "KRUBB Burgers - Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Sturegatan 11",
+      "website": "https://krubbburgers.se/?utm_source=google",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "CHILI",
+      "price": 130,
+      "category": "Kött",
+      "restaurant": "KRUBB Burgers - Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Sturegatan 11",
+      "website": "https://krubbburgers.se/?utm_source=google",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "SMOKEY",
+      "price": 130,
+      "category": "Kött",
+      "restaurant": "KRUBB Burgers - Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Sturegatan 11",
+      "website": "https://krubbburgers.se/?utm_source=google",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "TRYFFEL",
+      "price": 130,
+      "category": "Kött",
+      "restaurant": "KRUBB Burgers - Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Sturegatan 11",
+      "website": "https://krubbburgers.se/?utm_source=google",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "CHEESE",
+      "price": 130,
+      "category": "Kött",
+      "restaurant": "KRUBB Burgers - Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Sturegatan 11",
+      "website": "https://krubbburgers.se/?utm_source=google",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "CHILI DE LUXE",
+      "price": 140,
+      "category": "Kött",
+      "restaurant": "KRUBB Burgers - Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Sturegatan 11",
+      "website": "https://krubbburgers.se/?utm_source=google",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "DOUBLE CHEESE",
+      "price": 145,
+      "category": "Kött",
+      "restaurant": "KRUBB Burgers - Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Sturegatan 11",
+      "website": "https://krubbburgers.se/?utm_source=google",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Beef Stroganoff",
+      "price": 145,
+      "category": "Kött",
+      "restaurant": "Lilla Rött",
+      "restaurant_type": "Restaurant",
+      "address": "Tulegatan 5",
+      "website": "http://www.lillarottsundbyberg.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Daily Special: Meatballs",
+      "price": 145,
+      "category": "Kött",
+      "restaurant": "Lilla Rött",
+      "restaurant_type": "Restaurant",
+      "address": "Tulegatan 5",
+      "website": "http://www.lillarottsundbyberg.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Pad Thai",
+      "price": 145,
+      "category": "Kött",
+      "restaurant": "Klå Fann Thai | Thairestaurang i Solna, Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Ekensbergsvägen 97",
+      "website": "http://www.nyaklafannthai.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Massaman Curry",
+      "price": 145,
+      "category": "Kött",
+      "restaurant": "Klå Fann Thai | Thairestaurang i Solna, Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Ekensbergsvägen 97",
+      "website": "http://www.nyaklafannthai.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Beef Satay",
+      "price": 145,
+      "category": "Kött",
+      "restaurant": "Klå Fann Thai | Thairestaurang i Solna, Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Ekensbergsvägen 97",
+      "website": "http://www.nyaklafannthai.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Crispy Duck",
+      "price": 145,
+      "category": "Kött",
+      "restaurant": "Klå Fann Thai | Thairestaurang i Solna, Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Ekensbergsvägen 97",
+      "website": "http://www.nyaklafannthai.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Korvhantverk",
+      "price": 189,
+      "category": "Kött",
+      "restaurant": "Delibruket Flatbread",
+      "restaurant_type": "Restaurant",
+      "address": "Bergsgatan 1",
+      "website": "http://www.flatbread.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Steak",
+      "price": 205,
+      "category": "Kött",
+      "restaurant": "Delibruket Flatbread",
+      "restaurant_type": "Restaurant",
+      "address": "Bergsgatan 1",
+      "website": "http://www.flatbread.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Pulled Beef",
+      "price": 205,
+      "category": "Kött",
+      "restaurant": "Delibruket Flatbread",
+      "restaurant_type": "Restaurant",
+      "address": "Bergsgatan 1",
+      "website": "http://www.flatbread.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Kebab",
+      "price": 205,
+      "category": "Kött",
+      "restaurant": "Delibruket Flatbread",
+      "restaurant_type": "Restaurant",
+      "address": "Bergsgatan 1",
+      "website": "http://www.flatbread.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "KALVKÖTTBULLAR",
+      "price": 215,
+      "category": "Kött",
+      "restaurant": "The Public",
+      "restaurant_type": "Restaurant",
+      "address": "Esplanaden 10",
+      "website": "https://sundbyberg.thepublic.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Combo Meal: Chicken & Rice",
+      "price": 145,
+      "category": "Lunch Combo",
+      "restaurant": "Lilla Rött",
+      "restaurant_type": "Restaurant",
+      "address": "Tulegatan 5",
+      "website": "http://www.lillarottsundbyberg.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Pasta Primavera",
+      "price": 145,
+      "category": "Pasta",
+      "restaurant": "Lilla Rött",
+      "restaurant_type": "Restaurant",
+      "address": "Tulegatan 5",
+      "website": "http://www.lillarottsundbyberg.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "SPICY VODKAPASTA",
+      "price": 255,
+      "category": "Pasta",
+      "restaurant": "The Public",
+      "restaurant_type": "Restaurant",
+      "address": "Esplanaden 10",
+      "website": "https://sundbyberg.thepublic.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "KALVPASTA BIANCO",
+      "price": 275,
+      "category": "Pasta",
+      "restaurant": "The Public",
+      "restaurant_type": "Restaurant",
+      "address": "Esplanaden 10",
+      "website": "https://sundbyberg.thepublic.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "SKALDJURSPASTA",
+      "price": 275,
+      "category": "Pasta",
+      "restaurant": "The Public",
+      "restaurant_type": "Restaurant",
+      "address": "Esplanaden 10",
+      "website": "https://sundbyberg.thepublic.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Margherita Pizza",
+      "price": 145,
+      "category": "Pizza",
+      "restaurant": "Lilla Rött",
+      "restaurant_type": "Restaurant",
+      "address": "Tulegatan 5",
+      "website": "http://www.lillarottsundbyberg.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Flatbread",
+      "price": 165,
+      "category": "Pizza",
+      "restaurant": "Delibruket Flatbread",
+      "restaurant_type": "Restaurant",
+      "address": "Bergsgatan 1",
+      "website": "http://www.flatbread.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Napolitana",
+      "price": 169,
+      "category": "Pizza",
+      "restaurant": "Delibruket Flatbread",
+      "restaurant_type": "Restaurant",
+      "address": "Bergsgatan 1",
+      "website": "http://www.flatbread.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Buffel",
+      "price": 175,
+      "category": "Pizza",
+      "restaurant": "Delibruket Flatbread",
+      "restaurant_type": "Restaurant",
+      "address": "Bergsgatan 1",
+      "website": "http://www.flatbread.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Rödbetan",
+      "price": 179,
+      "category": "Pizza",
+      "restaurant": "Delibruket Flatbread",
+      "restaurant_type": "Restaurant",
+      "address": "Bergsgatan 1",
+      "website": "http://www.flatbread.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Delibruket's Egen",
+      "price": 185,
+      "category": "Pizza",
+      "restaurant": "Delibruket Flatbread",
+      "restaurant_type": "Restaurant",
+      "address": "Bergsgatan 1",
+      "website": "http://www.flatbread.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Prosciutto di Parma",
+      "price": 189,
+      "category": "Pizza",
+      "restaurant": "Delibruket Flatbread",
+      "restaurant_type": "Restaurant",
+      "address": "Bergsgatan 1",
+      "website": "http://www.flatbread.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Pepperoni",
+      "price": 189,
+      "category": "Pizza",
+      "restaurant": "Delibruket Flatbread",
+      "restaurant_type": "Restaurant",
+      "address": "Bergsgatan 1",
+      "website": "http://www.flatbread.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "PIZZA RUSTICO",
+      "price": 195,
+      "category": "Pizza",
+      "restaurant": "The Public",
+      "restaurant_type": "Restaurant",
+      "address": "Esplanaden 10",
+      "website": "https://sundbyberg.thepublic.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Quattro Formaggi",
+      "price": 195,
+      "category": "Pizza",
+      "restaurant": "Delibruket Flatbread",
+      "restaurant_type": "Restaurant",
+      "address": "Bergsgatan 1",
+      "website": "http://www.flatbread.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "CEASARSALLAD",
+      "price": 145,
+      "category": "Sallad",
+      "restaurant": "KRUBB Burgers - Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Sturegatan 11",
+      "website": "https://krubbburgers.se/?utm_source=google",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "SÄSONGENS HALLOUMISALLAD",
+      "price": 145,
+      "category": "Sallad",
+      "restaurant": "KRUBB Burgers - Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Sturegatan 11",
+      "website": "https://krubbburgers.se/?utm_source=google",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Larb Salad",
+      "price": 145,
+      "category": "Sallad",
+      "restaurant": "Klå Fann Thai | Thairestaurang i Solna, Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Ekensbergsvägen 97",
+      "website": "http://www.nyaklafannthai.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Mango Salad",
+      "price": 145,
+      "category": "Sallad",
+      "restaurant": "Klå Fann Thai | Thairestaurang i Solna, Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Ekensbergsvägen 97",
+      "website": "http://www.nyaklafannthai.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "CAESARSALLAD med kyckling",
+      "price": 195,
+      "category": "Sallad",
+      "restaurant": "The Public",
+      "restaurant_type": "Restaurant",
+      "address": "Esplanaden 10",
+      "website": "https://sundbyberg.thepublic.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "CAESARSALLAD med räkor",
+      "price": 235,
+      "category": "Sallad",
+      "restaurant": "The Public",
+      "restaurant_type": "Restaurant",
+      "address": "Esplanaden 10",
+      "website": "https://sundbyberg.thepublic.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Lentil Soup",
+      "price": 95,
+      "category": "Soppa",
+      "restaurant": "Lilla Rött",
+      "restaurant_type": "Restaurant",
+      "address": "Tulegatan 5",
+      "website": "http://www.lillarottsundbyberg.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Tom Yum Soup",
+      "price": 145,
+      "category": "Soppa",
+      "restaurant": "Klå Fann Thai | Thairestaurang i Solna, Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Ekensbergsvägen 97",
+      "website": "http://www.nyaklafannthai.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Thai Noodle Soup",
+      "price": 145,
+      "category": "Soppa",
+      "restaurant": "Klå Fann Thai | Thairestaurang i Solna, Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Ekensbergsvägen 97",
+      "website": "http://www.nyaklafannthai.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "ANAMMA",
+      "price": 135,
+      "category": "Vegansk",
+      "restaurant": "KRUBB Burgers - Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Sturegatan 11",
+      "website": "https://krubbburgers.se/?utm_source=google",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Weekly Menu: Quinoa Salad",
+      "price": 145,
+      "category": "Vegansk",
+      "restaurant": "Lilla Rött",
+      "restaurant_type": "Restaurant",
+      "address": "Tulegatan 5",
+      "website": "http://www.lillarottsundbyberg.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Red Curry with Tofu",
+      "price": 145,
+      "category": "Vegansk",
+      "restaurant": "Klå Fann Thai | Thairestaurang i Solna, Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Ekensbergsvägen 97",
+      "website": "http://www.nyaklafannthai.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Vegan",
+      "price": 169,
+      "category": "Vegansk",
+      "restaurant": "Delibruket Flatbread",
+      "restaurant_type": "Restaurant",
+      "address": "Bergsgatan 1",
+      "website": "http://www.flatbread.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Mevegan",
+      "price": 189,
+      "category": "Vegansk",
+      "restaurant": "Delibruket Flatbread",
+      "restaurant_type": "Restaurant",
+      "address": "Bergsgatan 1",
+      "website": "http://www.flatbread.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Smörgås med ost och grönsaker",
+      "price": 50,
+      "category": "Vegetarisk",
+      "restaurant": "Cafe Boulevard - Konditori & Catering - Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Esplanaden 17",
+      "website": "https://cafeboulevard.se/?utm_source=google",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Vegetable Stir Fry",
+      "price": 95,
+      "category": "Vegetarisk",
+      "restaurant": "Lilla Rött",
+      "restaurant_type": "Restaurant",
+      "address": "Tulegatan 5",
+      "website": "http://www.lillarottsundbyberg.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "GREEN BURGER",
+      "price": 130,
+      "category": "Vegetarisk",
+      "restaurant": "KRUBB Burgers - Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Sturegatan 11",
+      "website": "https://krubbburgers.se/?utm_source=google",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "HALLOUMIBURGARE",
+      "price": 140,
+      "category": "Vegetarisk",
+      "restaurant": "KRUBB Burgers - Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Sturegatan 11",
+      "website": "https://krubbburgers.se/?utm_source=google",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Stuffed Bell Peppers",
+      "price": 145,
+      "category": "Vegetarisk",
+      "restaurant": "Lilla Rött",
+      "restaurant_type": "Restaurant",
+      "address": "Tulegatan 5",
+      "website": "http://www.lillarottsundbyberg.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Vegetable Stir Fry",
+      "price": 145,
+      "category": "Vegetarisk",
+      "restaurant": "Klå Fann Thai | Thairestaurang i Solna, Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Ekensbergsvägen 97",
+      "website": "http://www.nyaklafannthai.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Spring Rolls",
+      "price": 145,
+      "category": "Vegetarisk",
+      "restaurant": "Klå Fann Thai | Thairestaurang i Solna, Sundbyberg",
+      "restaurant_type": "Restaurant",
+      "address": "Ekensbergsvägen 97",
+      "website": "http://www.nyaklafannthai.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "SPARRISRISOTTO",
+      "price": 255,
+      "category": "Vegetarisk",
+      "restaurant": "The Public",
+      "restaurant_type": "Restaurant",
+      "address": "Esplanaden 10",
+      "website": "https://sundbyberg.thepublic.se/",
+      "source": "Traditional scraping"
+    },
+    {
+      "name": "Kyckling",
+      "description": "Jordnötssås, kokos, curry, koriander, jasminris",
+      "price": 149,
+      "category": "Kött",
+      "restaurant": "Restaurang S",
+      "source": "Latest unified scraping (screenshot)"
+    },
+    {
+      "name": "Örtbakad Sejfilé",
+      "description": "Tomatsalsa, romcrème, potatisgratäng",
+      "price": 149,
+      "category": "Fisk",
+      "restaurant": "Restaurang S",
+      "source": "Latest unified scraping (screenshot)"
+    },
+    {
+      "name": "Pasta Rummo",
+      "description": "Lax, grönsakscrudité, tomatiserad vittvinsås, grana padano, napolitana",
+      "price": 149,
+      "category": "Fisk",
+      "restaurant": "Restaurang S",
+      "source": "Latest unified scraping (screenshot)"
+    },
+    {
+      "name": "Vegansk Linsgryta",
+      "description": "Curry, champinjoner, kokos, jasminris",
+      "price": 149,
+      "category": "Vegetarisk",
+      "restaurant": "Restaurang S",
+      "source": "Latest unified scraping (screenshot)"
+    },
+    {
+      "name": "Flatbread buffé",
+      "price": 209,
+      "category": "Buffet",
+      "restaurant": "Unknown",
+      "source": "Smart extraction"
+    },
+    {
+      "name": "Nachos",
+      "price": 60,
+      "description": "med guacamole och pico de gallo",
+      "restaurant": "KRUBB Burgers",
+      "source": "Fixed extraction with descriptions"
+    },
+    {
+      "name": "Fried Cheese Fries",
+      "price": 55,
+      "restaurant": "KRUBB Burgers",
+      "source": "Fixed extraction with descriptions"
+    },
+    {
+      "name": "Sweet Potato Fries",
+      "price": 50,
+      "restaurant": "KRUBB Burgers",
+      "source": "Fixed extraction with descriptions"
+    },
+    {
+      "name": "Chili",
+      "price": 130,
+      "description": "150g färskmalet nötkött, Sallad, dressing, jalapeño, picklad rödlök och Cheddarost.",
+      "restaurant": "KRUBB Burgers",
+      "source": "Fixed extraction with descriptions"
+    },
+    {
+      "name": "Smokey",
+      "price": 130,
+      "description": "150g färskmalet nötkött, Sallad, dressing, tomat, Cheddarost, bacon och BBQ sås.",
+      "restaurant": "KRUBB Burgers",
+      "source": "Fixed extraction with descriptions"
+    },
+    {
+      "name": "Tryffel",
+      "price": 130,
+      "description": "150g färskmalet nötkött, Sallad, tryffeldressing, Cheddarost och karamelliserad lök.",
+      "restaurant": "KRUBB Burgers",
+      "source": "Fixed extraction with descriptions"
+    },
+    {
+      "name": "Cheese",
+      "price": 130,
+      "description": "150g färskmalet nötkött, Sallad, dressing, karamelliserad lök, Cheddarost och ostcrème.",
+      "restaurant": "KRUBB Burgers",
+      "source": "Fixed extraction with descriptions"
+    },
+    {
+      "name": "Chili De Luxe",
+      "price": 140,
+      "description": "150g färskmalet nötkött, Sallad, dressing, jalapeño, picklad rödlök, bacon, BBQ sås, Cheddarost och ostcrème.",
+      "restaurant": "KRUBB Burgers",
+      "source": "Fixed extraction with descriptions"
+    },
+    {
+      "name": "Double Cheese",
+      "price": 145,
+      "description": "2x100g färskmalet nötkött, 2 x Cheddarost, chilidressing och karamelliserad lök.",
+      "restaurant": "KRUBB Burgers",
+      "source": "Fixed extraction with descriptions"
+    },
+    {
+      "name": "Kycklingburgare",
+      "price": 145,
+      "description": "Pankofriterad kycklinglårfilé, sallad, het mayo, tomat, grana padano ost och parmesanost.",
+      "restaurant": "KRUBB Burgers",
+      "source": "Fixed extraction with descriptions"
+    },
+    {
+      "name": "Halloumburgare",
+      "price": 140,
+      "description": "Halloumi, sallad, dressing, tomat, picklad rödlök och coleslaw.",
+      "restaurant": "KRUBB Burgers",
+      "source": "Fixed extraction with descriptions"
+    },
+    {
+      "name": "Fiskburgare",
+      "price": 140,
+      "description": "Pankofriterad stilla havstorsk, sallad, dressing och mangosalsa.",
+      "restaurant": "KRUBB Burgers",
+      "source": "Fixed extraction with descriptions"
+    },
+    {
+      "name": "Anamma",
+      "price": 135,
+      "description": "Vegansk anammafärs med het paprika, sallad, guacamole & dressing.",
+      "restaurant": "KRUBB Burgers",
+      "source": "Fixed extraction with descriptions"
+    },
+    {
+      "name": "Green Burger",
+      "price": 130,
+      "description": "KRUBB's gröna burgare på kikärtor, persilja, blandade bönor. Serveras med krispsallad, jalapeño, tomat, guacamole och mayo.",
+      "restaurant": "KRUBB Burgers",
+      "source": "Fixed extraction with descriptions"
+    },
+    {
+      "name": "Ceasarsallad",
+      "price": 145,
+      "description": "Klassisk sallad med kycklinglårfilé, bacon, sallad, tomat, grana padano ost, parmesanost och ceasardressing.",
+      "restaurant": "KRUBB Burgers",
+      "source": "Fixed extraction with descriptions"
+    },
+    {
+      "name": "Säsongens Halloumisallad",
+      "price": 145,
+      "restaurant": "KRUBB Burgers",
+      "source": "Fixed extraction with descriptions"
+    },
+    {
+      "name": "Caprese",
+      "price": 129,
+      "description": "Buffelmozzarella, cocktailmix tomat, basilika, olivolja",
+      "restaurant": "Ristorante Rustico",
+      "source": "Fixed extraction with descriptions"
+    },
+    {
+      "name": "Salsiccia e Pomodoro",
+      "price": 139,
+      "description": "Fräst salsiccia i en tomatragu, rostad bröd & aioli",
+      "restaurant": "Ristorante Rustico",
+      "source": "Fixed extraction with descriptions"
+    },
+    {
+      "name": "Arancini",
+      "price": 119,
+      "description": "Klassiska panerade, friterade risottobollar, fyllda med pesto, serveras på tomatragu, het chillikräm, parmesan",
+      "restaurant": "Ristorante Rustico",
+      "source": "Fixed extraction with descriptions"
+    },
+    {
+      "name": "Carciofi alla Romana",
+      "price": 109,
+      "description": "Rostad kronärtskocka, citron, olivolja, vitlök, serveras med aioli",
+      "restaurant": "Ristorante Rustico",
+      "source": "Fixed extraction with descriptions"
+    },
+    {
+      "name": "KALVGRYTA",
+      "description": "Med champinjoner, rotfrukter, örter och madeira, serveras med potatismos",
+      "price": 215,
+      "category": "Kött",
+      "restaurant": "The Public",
+      "source": "Manual The Public descriptions"
+    }
+  ]
+}

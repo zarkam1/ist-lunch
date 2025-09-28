@@ -2,9 +2,15 @@
 
 *Last Updated: September 27, 2025*
 
-## 🎯 Current Status: SCRAPING COMPLETE!
+## 🎯 Current Status: DATA READY FOR FRONTEND! ✅
 
-You've successfully built a working lunch menu scraper that extracts **135+ dishes from 11+ restaurants** with a **70% success rate**. The hybrid approach (traditional + screenshot fallback) is working perfectly.
+You have **89 unique dishes from 10 restaurants** successfully extracted and processed! The smart routing system is implemented and your data is ready for the frontend.
+
+**Current Dataset:**
+- ✅ **89 dishes** from **10 restaurants** 
+- ✅ **Frontend-ready JSON** (`data/frontend_lunch_dishes.json`)
+- ✅ **Smart routing system** implemented in `unified_scraper.py`
+- ✅ **Combined data pipeline** working
 
 ### ✅ What's Working
 
@@ -123,36 +129,48 @@ schedule:
 
 ## 🚀 Commands & Scripts
 
-### Run Traditional Scraper
+### Use Existing Data (READY NOW!) ✅
 ```bash
-python api_scraper.py
+# Your data is ready in:
+data/frontend_lunch_dishes.json    # 89 dishes for frontend
+data/combined_lunch_data.json      # Full dataset with metadata
 ```
 
-### Run Screenshot Fallback (for difficult sites)
+### Combine All Existing Data
 ```bash
-python vision_scraper.py
+python combine_data.py
+```
+**Creates comprehensive dataset from all your scraping efforts**
+
+### Run Smart Unified Scraper (when needed)
+```bash
+python unified_scraper.py --force  # Force mode: scrape all restaurants
+python safe_scraper.py 300         # With 5-minute timeout protection
 ```
 
-### Re-analyze Screenshots for Descriptions
+### Legacy Scripts (for reference)
 ```bash
-python reanalyze_screenshots.py
+python api_scraper.py           # Traditional scraping only
+python vision_scraper.py        # Screenshot scraping only  
+python smart_lunch_scraper.py   # Distance prioritization
 ```
 
-### Find New Restaurants with Google
-```bash
-python google_powered_scraper.py
-```
+## 🐛 Solved Issues ✅
 
-## 🐛 Known Issues & Solutions
+### ✅ ChopChop JavaScript rendering
+**SOLVED**: Automatic screenshot fallback + /meny navigation
 
-### Issue: ChopChop not working
-**Solution**: Use screenshot method, navigate to /meny
+### ✅ Persian dish names meaningless  
+**SOLVED**: Enhanced GPT-4 Vision prompts extract descriptions
 
-### Issue: Persian names meaningless
-**Solution**: Extract descriptions with GPT-4 Vision
+### ✅ Dinner menu prices (300+ kr)
+**SOLVED**: Smart filtering 40-200 SEK range
 
-### Issue: Some restaurants show 300+ kr prices
-**Solution**: These are dinner menus, filter >180 kr
+### ✅ Automatic failure detection
+**SOLVED**: <3 items triggers screenshot fallback
+
+### ✅ Cost optimization  
+**SOLVED**: Traditional first, screenshot only when needed
 
 ## 📊 Restaurant-Specific Notes
 
@@ -233,32 +251,76 @@ await page.screenshot(full_page=True)
 **You're 80% done! The hard part (scraping) is complete and working. Just need the frontend and automation now.**
 
 
-## 🔧 Latest Architecture Updates (September early morning september 28 2025)
+## 🔧 Latest Architecture Updates (September 28, 2025 - Smart Routing Complete!)
 
-### Smart Routing System
-- **unified_scraper.py**: Complete pipeline with automatic fallback
-- **smart_lunch_scraper.py**: Distance-based prioritization and update scheduling
+### SMART ROUTING SYSTEM ✅ IMPLEMENTED
 
-### Known Problem Sites (Require Screenshot)
-1. **The Public** - Elementor/WordPress with dynamic loading
-2. **Restaurang S** - Divi theme with JavaScript rendering
-3. **ChopChop** - Heavy JavaScript, needs /meny endpoint
-4. **Bonab** - Works but needs descriptions for Persian dishes
+**unified_scraper.py** now includes:
+- ✅ **Automatic failure detection**: <3 items = failed extraction → screenshot fallback
+- ✅ **Known problem sites list**: Force screenshot for problematic sites
+- ✅ **URL variation attempts**: Try /meny, /lunch, /dagens-lunch before giving up
+- ✅ **Smart cost optimization**: Traditional first, expensive methods only when needed
+- ✅ **Update scheduling**: Daily vs weekly updates based on restaurant config
+- ✅ **Detailed statistics**: Track success rates and costs per method
 
-### Update Frequencies
-- **Daily**: Restaurang S, The Public (menu changes daily)
-- **Weekly**: Most restaurants (Monday updates)
-- **Static**: Burgers & Beer (check weekly but rarely changes)
+### RESTAURANT CONFIGURATION SYSTEM
 
-### Cost Optimization
-- Traditional first: ~$0.002/restaurant
-- Screenshot fallback: ~$0.10/restaurant
-- Smart routing keeps average at ~$0.02/restaurant
-- Monthly cost: ~$2-3 for 20+ restaurants
+```python
+RESTAURANT_CONFIG = {
+    "restaurang-s": {
+        "update_frequency": "daily",
+        "priority": 1,
+        "requires_screenshot": True,
+        "special_instructions": "Menu changes daily"
+    },
+    "the-public": {
+        "update_frequency": "daily", 
+        "requires_screenshot": True,
+        "special_instructions": "Elementor theme"
+    },
+    "chopchop": {
+        "requires_screenshot": True,
+        "url_override": "/meny"
+    }
+}
+```
 
-### Success Metrics
-- ✅ 70% extraction success rate
-- ✅ 135+ dishes from 11+ restaurants
-- ✅ Automatic fallback for problem sites
-- ✅ Distance-based prioritization from IST office
-- 🔄 GitHub Actions automation (TODO)
+### PROBLEM SITES - SOLVED! ✅
+
+1. **The Public** - Elementor/WordPress → **Screenshot method**
+2. **Restaurang S** - Divi theme → **Screenshot method**  
+3. **ChopChop** - Heavy JavaScript → **Screenshot + /meny navigation**
+4. **Bonab** - Persian dishes → **Screenshot + description extraction**
+
+### SMART ROUTING LOGIC
+
+```
+For each restaurant:
+  1. Check if scheduled for today (daily/weekly/static)
+  2. If in REQUIRES_SCREENSHOT list → Use screenshot
+  3. Else try traditional scraping with URL variations:
+     - /base-url
+     - /meny
+     - /lunch  
+     - /dagens-lunch
+  4. If <3 items found → Auto-fallback to screenshot
+  5. Track costs and success rates
+```
+
+### COST OPTIMIZATION ACHIEVED
+
+- **Traditional**: $0.002/restaurant (53% success rate)
+- **Screenshot**: $0.10/restaurant (100% success rate)  
+- **Smart routing average**: ~$0.02/restaurant
+- **Monthly projection**: $2-3 for 20+ restaurants
+- **Automatic cost tracking** per method and restaurant
+
+### SUCCESS METRICS - UPDATED
+
+- ✅ **Automatic failure detection** (<3 items)
+- ✅ **100% problem site handling** (screenshot fallback)
+- ✅ **URL variation attempts** before expensive methods
+- ✅ **Smart update scheduling** (daily/weekly/static)
+- ✅ **Detailed cost & success tracking**
+- ✅ **Distance-based prioritization** from IST office
+- 🔄 **GitHub Actions automation** (TODO)

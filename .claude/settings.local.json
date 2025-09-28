@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(npm install)",
+      "Bash(npm run dev:*)",
+      "Bash(curl:*)",
+      "Bash(npm install:*)",
+      "Bash(npm ls:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(pkill:*)",
+      "Bash(git add:*)",
+      "Bash(PORT=3002 npm run dev)",
+      "Bash(PORT=3001 npm run dev)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

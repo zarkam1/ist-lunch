@@ -1,0 +1,772 @@
+[
+  {
+    "name": "Orange Chicken & Thai Tofu",
+    "description": "",
+    "price": 122,
+    "category": "Asiatiskt",
+    "restaurant": "Lilla Rött"
+  },
+  {
+    "name": "Orange Chicken & Thai Tofu",
+    "description": "",
+    "price": 122,
+    "category": "Asiatiskt",
+    "restaurant": "Fågelboet"
+  },
+  {
+    "name": "Orange Chicken & Thai Tofu",
+    "description": "",
+    "price": 122,
+    "category": "Asiatiskt",
+    "restaurant": "Klå Fann Thai | Thairestaurang i Solna, Sundbyberg"
+  },
+  {
+    "name": "Thai Green Curry",
+    "description": "",
+    "price": 145,
+    "category": "Asiatiskt",
+    "restaurant": "Lilla Rött"
+  },
+  {
+    "name": "Fried Rice",
+    "description": "",
+    "price": 145,
+    "category": "Asiatiskt",
+    "restaurant": "Klå Fann Thai | Thairestaurang i Solna, Sundbyberg"
+  },
+  {
+    "name": "Lunchbuffé",
+    "description": "",
+    "price": 145,
+    "category": "Buffet",
+    "restaurant": "Restaurant Lotus"
+  },
+  {
+    "name": "Buffet Selection",
+    "description": "",
+    "price": 165,
+    "category": "Buffet",
+    "restaurant": "Lilla Rött"
+  },
+  {
+    "name": "Hot Pot-lunch",
+    "description": "",
+    "price": 288,
+    "category": "Buffet",
+    "restaurant": "Restaurant Lotus"
+  },
+  {
+    "name": "THE PUBLIC BURGARE",
+    "description": "",
+    "price": 210,
+    "category": "Burgare",
+    "restaurant": "The Public"
+  },
+  {
+    "name": "BBQ PULLED BEEF BURGARE",
+    "description": "",
+    "price": 210,
+    "category": "Burgare",
+    "restaurant": "The Public"
+  },
+  {
+    "name": "Lax / Räkor / Skagenröra",
+    "description": "",
+    "price": 119,
+    "category": "Fisk",
+    "restaurant": "Cafe Boulevard - Konditori & Catering - Sundbyberg"
+  },
+  {
+    "name": "FISKBURGARE",
+    "description": "",
+    "price": 140,
+    "category": "Fisk",
+    "restaurant": "KRUBB Burgers - Sundbyberg"
+  },
+  {
+    "name": "Grilled Salmon with Dill Sauce",
+    "description": "",
+    "price": 145,
+    "category": "Fisk",
+    "restaurant": "Lilla Rött"
+  },
+  {
+    "name": "Fish Tacos",
+    "description": "",
+    "price": 145,
+    "category": "Fisk",
+    "restaurant": "Lilla Rött"
+  },
+  {
+    "name": "CITRONBAKAD FÄNKÅL",
+    "description": "",
+    "price": 145,
+    "category": "Förrätter",
+    "restaurant": "The Public"
+  },
+  {
+    "name": "RÖDBETSTARTAR",
+    "description": "",
+    "price": 165,
+    "category": "Förrätter",
+    "restaurant": "The Public"
+  },
+  {
+    "name": "VITVINS BLANCHERAD VIT SPARRIS",
+    "description": "",
+    "price": 185,
+    "category": "Förrätter",
+    "restaurant": "The Public"
+  },
+  {
+    "name": "KLASSISK TOAST SKAGEN",
+    "description": "",
+    "price": 190,
+    "category": "Förrätter",
+    "restaurant": "The Public"
+  },
+  {
+    "name": "LÖJROM MED TOAST",
+    "description": "",
+    "price": 215,
+    "category": "Förrätter",
+    "restaurant": "The Public"
+  },
+  {
+    "name": "KYCKLINGBURGARE",
+    "description": "",
+    "price": 145,
+    "category": "Kyckling",
+    "restaurant": "KRUBB Burgers - Sundbyberg"
+  },
+  {
+    "name": "Chicken Caesar Salad",
+    "description": "",
+    "price": 145,
+    "category": "Kyckling",
+    "restaurant": "Lilla Rött"
+  },
+  {
+    "name": "Green Curry",
+    "description": "",
+    "price": 145,
+    "category": "Kyckling",
+    "restaurant": "Klå Fann Thai | Thairestaurang i Solna, Sundbyberg"
+  },
+  {
+    "name": "Thai Basil Chicken",
+    "description": "",
+    "price": 145,
+    "category": "Kyckling",
+    "restaurant": "Klå Fann Thai | Thairestaurang i Solna, Sundbyberg"
+  },
+  {
+    "name": "BBQ Kyckling",
+    "description": "",
+    "price": 187,
+    "category": "Kyckling",
+    "restaurant": "Delibruket Flatbread"
+  },
+  {
+    "name": "Smörgås med ost och skinka",
+    "description": "",
+    "price": 50,
+    "category": "Kött",
+    "restaurant": "Cafe Boulevard - Konditori & Catering - Sundbyberg"
+  },
+  {
+    "name": "Smörgås med kalkon och ost",
+    "description": "",
+    "price": 50,
+    "category": "Kött",
+    "restaurant": "Cafe Boulevard - Konditori & Catering - Sundbyberg"
+  },
+  {
+    "name": "Salamismörgås",
+    "description": "",
+    "price": 50,
+    "category": "Kött",
+    "restaurant": "Cafe Boulevard - Konditori & Catering - Sundbyberg"
+  },
+  {
+    "name": "Leverpastejssmörgås",
+    "description": "",
+    "price": 50,
+    "category": "Kött",
+    "restaurant": "Cafe Boulevard - Konditori & Catering - Sundbyberg"
+  },
+  {
+    "name": "BARNMENY",
+    "description": "",
+    "price": 75,
+    "category": "Kött",
+    "restaurant": "KRUBB Burgers - Sundbyberg"
+  },
+  {
+    "name": "ORIGINAL BURGARE",
+    "description": "",
+    "price": 105,
+    "category": "Kött",
+    "restaurant": "KRUBB Burgers - Sundbyberg"
+  },
+  {
+    "name": "CHILI",
+    "description": "",
+    "price": 130,
+    "category": "Kött",
+    "restaurant": "KRUBB Burgers - Sundbyberg"
+  },
+  {
+    "name": "SMOKEY",
+    "description": "",
+    "price": 130,
+    "category": "Kött",
+    "restaurant": "KRUBB Burgers - Sundbyberg"
+  },
+  {
+    "name": "TRYFFEL",
+    "description": "",
+    "price": 130,
+    "category": "Kött",
+    "restaurant": "KRUBB Burgers - Sundbyberg"
+  },
+  {
+    "name": "CHEESE",
+    "description": "",
+    "price": 130,
+    "category": "Kött",
+    "restaurant": "KRUBB Burgers - Sundbyberg"
+  },
+  {
+    "name": "CHILI DE LUXE",
+    "description": "",
+    "price": 140,
+    "category": "Kött",
+    "restaurant": "KRUBB Burgers - Sundbyberg"
+  },
+  {
+    "name": "DOUBLE CHEESE",
+    "description": "",
+    "price": 145,
+    "category": "Kött",
+    "restaurant": "KRUBB Burgers - Sundbyberg"
+  },
+  {
+    "name": "Beef Stroganoff",
+    "description": "",
+    "price": 145,
+    "category": "Kött",
+    "restaurant": "Lilla Rött"
+  },
+  {
+    "name": "Daily Special: Meatballs",
+    "description": "",
+    "price": 145,
+    "category": "Kött",
+    "restaurant": "Lilla Rött"
+  },
+  {
+    "name": "Pad Thai",
+    "description": "",
+    "price": 145,
+    "category": "Kött",
+    "restaurant": "Klå Fann Thai | Thairestaurang i Solna, Sundbyberg"
+  },
+  {
+    "name": "Massaman Curry",
+    "description": "",
+    "price": 145,
+    "category": "Kött",
+    "restaurant": "Klå Fann Thai | Thairestaurang i Solna, Sundbyberg"
+  },
+  {
+    "name": "Beef Satay",
+    "description": "",
+    "price": 145,
+    "category": "Kött",
+    "restaurant": "Klå Fann Thai | Thairestaurang i Solna, Sundbyberg"
+  },
+  {
+    "name": "Crispy Duck",
+    "description": "",
+    "price": 145,
+    "category": "Kött",
+    "restaurant": "Klå Fann Thai | Thairestaurang i Solna, Sundbyberg"
+  },
+  {
+    "name": "Korvhantverk",
+    "description": "",
+    "price": 189,
+    "category": "Kött",
+    "restaurant": "Delibruket Flatbread"
+  },
+  {
+    "name": "Steak",
+    "description": "",
+    "price": 205,
+    "category": "Kött",
+    "restaurant": "Delibruket Flatbread"
+  },
+  {
+    "name": "Pulled Beef",
+    "description": "",
+    "price": 205,
+    "category": "Kött",
+    "restaurant": "Delibruket Flatbread"
+  },
+  {
+    "name": "Kebab",
+    "description": "",
+    "price": 205,
+    "category": "Kött",
+    "restaurant": "Delibruket Flatbread"
+  },
+  {
+    "name": "KALVKÖTTBULLAR",
+    "description": "",
+    "price": 215,
+    "category": "Kött",
+    "restaurant": "The Public"
+  },
+  {
+    "name": "Combo Meal: Chicken & Rice",
+    "description": "",
+    "price": 145,
+    "category": "Lunch Combo",
+    "restaurant": "Lilla Rött"
+  },
+  {
+    "name": "Pasta Primavera",
+    "description": "",
+    "price": 145,
+    "category": "Pasta",
+    "restaurant": "Lilla Rött"
+  },
+  {
+    "name": "SPICY VODKAPASTA",
+    "description": "",
+    "price": 255,
+    "category": "Pasta",
+    "restaurant": "The Public"
+  },
+  {
+    "name": "KALVPASTA BIANCO",
+    "description": "",
+    "price": 275,
+    "category": "Pasta",
+    "restaurant": "The Public"
+  },
+  {
+    "name": "SKALDJURSPASTA",
+    "description": "",
+    "price": 275,
+    "category": "Pasta",
+    "restaurant": "The Public"
+  },
+  {
+    "name": "Margherita Pizza",
+    "description": "",
+    "price": 145,
+    "category": "Pizza",
+    "restaurant": "Lilla Rött"
+  },
+  {
+    "name": "Flatbread",
+    "description": "",
+    "price": 165,
+    "category": "Pizza",
+    "restaurant": "Delibruket Flatbread"
+  },
+  {
+    "name": "Napolitana",
+    "description": "",
+    "price": 169,
+    "category": "Pizza",
+    "restaurant": "Delibruket Flatbread"
+  },
+  {
+    "name": "Buffel",
+    "description": "",
+    "price": 175,
+    "category": "Pizza",
+    "restaurant": "Delibruket Flatbread"
+  },
+  {
+    "name": "Rödbetan",
+    "description": "",
+    "price": 179,
+    "category": "Pizza",
+    "restaurant": "Delibruket Flatbread"
+  },
+  {
+    "name": "Delibruket's Egen",
+    "description": "",
+    "price": 185,
+    "category": "Pizza",
+    "restaurant": "Delibruket Flatbread"
+  },
+  {
+    "name": "Prosciutto di Parma",
+    "description": "",
+    "price": 189,
+    "category": "Pizza",
+    "restaurant": "Delibruket Flatbread"
+  },
+  {
+    "name": "Pepperoni",
+    "description": "",
+    "price": 189,
+    "category": "Pizza",
+    "restaurant": "Delibruket Flatbread"
+  },
+  {
+    "name": "PIZZA RUSTICO",
+    "description": "",
+    "price": 195,
+    "category": "Pizza",
+    "restaurant": "The Public"
+  },
+  {
+    "name": "Quattro Formaggi",
+    "description": "",
+    "price": 195,
+    "category": "Pizza",
+    "restaurant": "Delibruket Flatbread"
+  },
+  {
+    "name": "CEASARSALLAD",
+    "description": "",
+    "price": 145,
+    "category": "Sallad",
+    "restaurant": "KRUBB Burgers - Sundbyberg"
+  },
+  {
+    "name": "SÄSONGENS HALLOUMISALLAD",
+    "description": "",
+    "price": 145,
+    "category": "Sallad",
+    "restaurant": "KRUBB Burgers - Sundbyberg"
+  },
+  {
+    "name": "Larb Salad",
+    "description": "",
+    "price": 145,
+    "category": "Sallad",
+    "restaurant": "Klå Fann Thai | Thairestaurang i Solna, Sundbyberg"
+  },
+  {
+    "name": "Mango Salad",
+    "description": "",
+    "price": 145,
+    "category": "Sallad",
+    "restaurant": "Klå Fann Thai | Thairestaurang i Solna, Sundbyberg"
+  },
+  {
+    "name": "CAESARSALLAD med kyckling",
+    "description": "",
+    "price": 195,
+    "category": "Sallad",
+    "restaurant": "The Public"
+  },
+  {
+    "name": "CAESARSALLAD med räkor",
+    "description": "",
+    "price": 235,
+    "category": "Sallad",
+    "restaurant": "The Public"
+  },
+  {
+    "name": "Lentil Soup",
+    "description": "",
+    "price": 95,
+    "category": "Soppa",
+    "restaurant": "Lilla Rött"
+  },
+  {
+    "name": "Tom Yum Soup",
+    "description": "",
+    "price": 145,
+    "category": "Soppa",
+    "restaurant": "Klå Fann Thai | Thairestaurang i Solna, Sundbyberg"
+  },
+  {
+    "name": "Thai Noodle Soup",
+    "description": "",
+    "price": 145,
+    "category": "Soppa",
+    "restaurant": "Klå Fann Thai | Thairestaurang i Solna, Sundbyberg"
+  },
+  {
+    "name": "ANAMMA",
+    "description": "",
+    "price": 135,
+    "category": "Vegansk",
+    "restaurant": "KRUBB Burgers - Sundbyberg"
+  },
+  {
+    "name": "Weekly Menu: Quinoa Salad",
+    "description": "",
+    "price": 145,
+    "category": "Vegansk",
+    "restaurant": "Lilla Rött"
+  },
+  {
+    "name": "Red Curry with Tofu",
+    "description": "",
+    "price": 145,
+    "category": "Vegansk",
+    "restaurant": "Klå Fann Thai | Thairestaurang i Solna, Sundbyberg"
+  },
+  {
+    "name": "Vegan",
+    "description": "",
+    "price": 169,
+    "category": "Vegansk",
+    "restaurant": "Delibruket Flatbread"
+  },
+  {
+    "name": "Mevegan",
+    "description": "",
+    "price": 189,
+    "category": "Vegansk",
+    "restaurant": "Delibruket Flatbread"
+  },
+  {
+    "name": "Smörgås med ost och grönsaker",
+    "description": "",
+    "price": 50,
+    "category": "Vegetarisk",
+    "restaurant": "Cafe Boulevard - Konditori & Catering - Sundbyberg"
+  },
+  {
+    "name": "Vegetable Stir Fry",
+    "description": "",
+    "price": 95,
+    "category": "Vegetarisk",
+    "restaurant": "Lilla Rött"
+  },
+  {
+    "name": "GREEN BURGER",
+    "description": "",
+    "price": 130,
+    "category": "Vegetarisk",
+    "restaurant": "KRUBB Burgers - Sundbyberg"
+  },
+  {
+    "name": "HALLOUMIBURGARE",
+    "description": "",
+    "price": 140,
+    "category": "Vegetarisk",
+    "restaurant": "KRUBB Burgers - Sundbyberg"
+  },
+  {
+    "name": "Stuffed Bell Peppers",
+    "description": "",
+    "price": 145,
+    "category": "Vegetarisk",
+    "restaurant": "Lilla Rött"
+  },
+  {
+    "name": "Vegetable Stir Fry",
+    "description": "",
+    "price": 145,
+    "category": "Vegetarisk",
+    "restaurant": "Klå Fann Thai | Thairestaurang i Solna, Sundbyberg"
+  },
+  {
+    "name": "Spring Rolls",
+    "description": "",
+    "price": 145,
+    "category": "Vegetarisk",
+    "restaurant": "Klå Fann Thai | Thairestaurang i Solna, Sundbyberg"
+  },
+  {
+    "name": "SPARRISRISOTTO",
+    "description": "",
+    "price": 255,
+    "category": "Vegetarisk",
+    "restaurant": "The Public"
+  },
+  {
+    "name": "Kyckling",
+    "description": "Jordnötssås, kokos, curry, koriander, jasminris",
+    "price": 149,
+    "category": "Kött",
+    "restaurant": "Restaurang S"
+  },
+  {
+    "name": "Örtbakad Sejfilé",
+    "description": "Tomatsalsa, romcrème, potatisgratäng",
+    "price": 149,
+    "category": "Fisk",
+    "restaurant": "Restaurang S"
+  },
+  {
+    "name": "Pasta Rummo",
+    "description": "Lax, grönsakscrudité, tomatiserad vittvinsås, grana padano, napolitana",
+    "price": 149,
+    "category": "Fisk",
+    "restaurant": "Restaurang S"
+  },
+  {
+    "name": "Vegansk Linsgryta",
+    "description": "Curry, champinjoner, kokos, jasminris",
+    "price": 149,
+    "category": "Vegetarisk",
+    "restaurant": "Restaurang S"
+  },
+  {
+    "name": "Flatbread buffé",
+    "description": "",
+    "price": 209,
+    "category": "Buffet",
+    "restaurant": "Unknown"
+  },
+  {
+    "name": "Nachos",
+    "description": "med guacamole och pico de gallo",
+    "price": 60,
+    "category": "",
+    "restaurant": "KRUBB Burgers"
+  },
+  {
+    "name": "Fried Cheese Fries",
+    "description": "",
+    "price": 55,
+    "category": "",
+    "restaurant": "KRUBB Burgers"
+  },
+  {
+    "name": "Sweet Potato Fries",
+    "description": "",
+    "price": 50,
+    "category": "",
+    "restaurant": "KRUBB Burgers"
+  },
+  {
+    "name": "Chili",
+    "description": "150g färskmalet nötkött, Sallad, dressing, jalapeño, picklad rödlök och Cheddarost.",
+    "price": 130,
+    "category": "",
+    "restaurant": "KRUBB Burgers"
+  },
+  {
+    "name": "Smokey",
+    "description": "150g färskmalet nötkött, Sallad, dressing, tomat, Cheddarost, bacon och BBQ sås.",
+    "price": 130,
+    "category": "",
+    "restaurant": "KRUBB Burgers"
+  },
+  {
+    "name": "Tryffel",
+    "description": "150g färskmalet nötkött, Sallad, tryffeldressing, Cheddarost och karamelliserad lök.",
+    "price": 130,
+    "category": "",
+    "restaurant": "KRUBB Burgers"
+  },
+  {
+    "name": "Cheese",
+    "description": "150g färskmalet nötkött, Sallad, dressing, karamelliserad lök, Cheddarost och ostcrème.",
+    "price": 130,
+    "category": "",
+    "restaurant": "KRUBB Burgers"
+  },
+  {
+    "name": "Chili De Luxe",
+    "description": "150g färskmalet nötkött, Sallad, dressing, jalapeño, picklad rödlök, bacon, BBQ sås, Cheddarost och ostcrème.",
+    "price": 140,
+    "category": "",
+    "restaurant": "KRUBB Burgers"
+  },
+  {
+    "name": "Double Cheese",
+    "description": "2x100g färskmalet nötkött, 2 x Cheddarost, chilidressing och karamelliserad lök.",
+    "price": 145,
+    "category": "",
+    "restaurant": "KRUBB Burgers"
+  },
+  {
+    "name": "Kycklingburgare",
+    "description": "Pankofriterad kycklinglårfilé, sallad, het mayo, tomat, grana padano ost och parmesanost.",
+    "price": 145,
+    "category": "",
+    "restaurant": "KRUBB Burgers"
+  },
+  {
+    "name": "Halloumburgare",
+    "description": "Halloumi, sallad, dressing, tomat, picklad rödlök och coleslaw.",
+    "price": 140,
+    "category": "",
+    "restaurant": "KRUBB Burgers"
+  },
+  {
+    "name": "Fiskburgare",
+    "description": "Pankofriterad stilla havstorsk, sallad, dressing och mangosalsa.",
+    "price": 140,
+    "category": "",
+    "restaurant": "KRUBB Burgers"
+  },
+  {
+    "name": "Anamma",
+    "description": "Vegansk anammafärs med het paprika, sallad, guacamole & dressing.",
+    "price": 135,
+    "category": "",
+    "restaurant": "KRUBB Burgers"
+  },
+  {
+    "name": "Green Burger",
+    "description": "KRUBB's gröna burgare på kikärtor, persilja, blandade bönor. Serveras med krispsallad, jalapeño, tomat, guacamole och mayo.",
+    "price": 130,
+    "category": "",
+    "restaurant": "KRUBB Burgers"
+  },
+  {
+    "name": "Ceasarsallad",
+    "description": "Klassisk sallad med kycklinglårfilé, bacon, sallad, tomat, grana padano ost, parmesanost och ceasardressing.",
+    "price": 145,
+    "category": "",
+    "restaurant": "KRUBB Burgers"
+  },
+  {
+    "name": "Säsongens Halloumisallad",
+    "description": "",
+    "price": 145,
+    "category": "",
+    "restaurant": "KRUBB Burgers"
+  },
+  {
+    "name": "Caprese",
+    "description": "Buffelmozzarella, cocktailmix tomat, basilika, olivolja",
+    "price": 129,
+    "category": "",
+    "restaurant": "Ristorante Rustico"
+  },
+  {
+    "name": "Salsiccia e Pomodoro",
+    "description": "Fräst salsiccia i en tomatragu, rostad bröd & aioli",
+    "price": 139,
+    "category": "",
+    "restaurant": "Ristorante Rustico"
+  },
+  {
+    "name": "Arancini",
+    "description": "Klassiska panerade, friterade risottobollar, fyllda med pesto, serveras på tomatragu, het chillikräm, parmesan",
+    "price": 119,
+    "category": "",
+    "restaurant": "Ristorante Rustico"
+  },
+  {
+    "name": "Carciofi alla Romana",
+    "description": "Rostad kronärtskocka, citron, olivolja, vitlök, serveras med aioli",
+    "price": 109,
+    "category": "",
+    "restaurant": "Ristorante Rustico"
+  },
+  {
+    "name": "KALVGRYTA",
+    "description": "Med champinjoner, rotfrukter, örter och madeira, serveras med potatismos",
+    "price": 215,
+    "category": "Kött",
+    "restaurant": "The Public"
+  }
+]

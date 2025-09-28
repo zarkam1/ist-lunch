@@ -27,7 +27,8 @@ def combine_all_data():
         ("bonab_enhanced.json", "Enhanced Persian dishes"),
         ("all_menus.json", "Latest unified scraping"),
         ("smart_extraction_results.json", "Smart extraction"),
-        ("fixed_extraction_results.json", "Fixed extraction with descriptions")
+        ("fixed_extraction_results.json", "Fixed extraction with descriptions"),
+        ("sample_the_public_descriptions.json", "Manual The Public descriptions")
     ]
     
     for filename, source_name in data_sources:
@@ -106,6 +107,14 @@ def combine_all_data():
                         item["source"] = source_name
                         combined_dishes.append(item)
                     print(f"   Added {len(items)} dishes from {restaurant}")
+                    
+        elif filename == "sample_the_public_descriptions.json":
+            # Extract from sample descriptions format (direct list)
+            if isinstance(data, list):
+                for item in data:
+                    item["source"] = source_name
+                    combined_dishes.append(item)
+                print(f"   Added {len(data)} sample dishes with descriptions")
     
     # Remove duplicates based on name + restaurant
     print(f"\n🔍 Removing duplicates...")

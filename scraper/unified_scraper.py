@@ -28,7 +28,8 @@ LAT, LON = 59.3615, 17.9713
 BLACKLIST = [
     "delibruket-flatbread",  # Confirmed no weekday lunch
     "piatti",                 # Opens 17:00
-    "parma",                  # Dinner only
+    "parma",  
+    "Fågelboet"                # Dinner only
     # Add more as confirmed
 ]
 
@@ -37,6 +38,7 @@ WHITELIST = [
     "restaurang-s",
     "tre-broder",
     "bra-mat",
+      "brasserie-19"
     # Add more verified lunch spots
 ]
 
@@ -61,7 +63,9 @@ RESTAURANT_CONFIG = {
         "update_frequency": "daily", 
         "priority": 1,
         "requires_screenshot": True,
-        "special_instructions": "Daily specials, Elementor theme"
+        "special_instructions": "Daily specials, Elementor theme,Look for burger names, prices around 145-215 kr",
+         "url_override": "/lunch",  # Try /lunch endpoint
+   
     },
     "chopchop": {
         "update_frequency": "weekly",
@@ -137,7 +141,7 @@ class UnifiedLunchScraper:
         for term in search_terms:
             params = {
                 "location": f"{LAT},{LON}",
-                "radius": 1500,
+                "radius": 800,
                 "keyword": term,
                 "type": "restaurant|cafe|food",
                 "key": GOOGLE_API_KEY,
@@ -241,7 +245,8 @@ class UnifiedLunchScraper:
     
     def should_update_today(self, restaurant: Dict) -> bool:
         """Check if restaurant should be updated today based on configuration"""
-        
+        if os.getenv("DEV_MODE") == "true":
+            return True
         rest_id = restaurant["id"]
         config = RESTAURANT_CONFIG.get(rest_id, {"update_frequency": "weekly"})
         frequency = config.get("update_frequency", "weekly")
