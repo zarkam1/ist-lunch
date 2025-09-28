@@ -40,6 +40,44 @@ WHITELIST = [
     # Add more verified lunch spots
 ]
 
+# Known problem sites that require screenshot scraping
+REQUIRES_SCREENSHOT = [
+    "the-public",      # Elementor/WordPress with dynamic loading
+    "restaurang-s",    # Divi theme with JavaScript rendering
+    "chopchop",        # Heavy JavaScript, needs /meny endpoint
+    "bonab"            # Works but needs descriptions for Persian dishes
+]
+
+# Update frequency configuration
+RESTAURANT_CONFIG = {
+    # DAILY UPDATE RESTAURANTS (changes every day)
+    "restaurang-s": {
+        "update_frequency": "daily",
+        "priority": 1,
+        "requires_screenshot": True,
+        "special_instructions": "Menu changes daily, check each morning"
+    },
+    "the-public": {
+        "update_frequency": "daily", 
+        "priority": 1,
+        "requires_screenshot": True,
+        "special_instructions": "Daily specials, Elementor theme"
+    },
+    "chopchop": {
+        "update_frequency": "weekly",
+        "priority": 2,
+        "requires_screenshot": True,
+        "url_override": "/meny",
+        "special_instructions": "Navigate to /meny endpoint"
+    },
+    "bonab": {
+        "update_frequency": "weekly",
+        "priority": 2,
+        "requires_screenshot": True,
+        "special_instructions": "Persian restaurant - extract descriptions"
+    }
+}
+
 class UnifiedLunchScraper:
     """Main pipeline combining all techniques"""
     
@@ -47,11 +85,20 @@ class UnifiedLunchScraper:
         self.openai_client = openai.OpenAI(api_key=OPENAI_API_KEY)
         self.restaurants = []
         self.menus = {}
+        self.scraping_stats = {
+            "traditional_success": 0,
+            "traditional_failed": 0,
+            "screenshot_success": 0,
+            "screenshot_failed": 0,
+            "total_cost": 0.0
+        }
         
-    async def run_full_pipeline(self):
+    async def run_full_pipeline(self, force_all=False):
         """Execute complete lunch discovery and scraping pipeline"""
         
         print("🚀 IST Lunch Unified Pipeline Starting...")
+        if force_all:
+            print("🔥 FORCE MODE: Ignoring schedule, updating ALL restaurants")
         print("=" * 60)
         
         # Step 1: Discover restaurants
@@ -66,7 +113,7 @@ class UnifiedLunchScraper:
         
         # Step 3: Scrape menus
         print("\n🍽️ Step 3: Scraping menus...")
-        await self.scrape_all_menus()
+        await self.scrape_all_menus(force_all)
         
         # Step 4: Save results
         print("\n💾 Step 4: Saving results...")
@@ -148,101 +195,229 @@ class UnifiedLunchScraper:
         
         return filtered
     
-    async def scrape_all_menus(self):
-        """Scrape menus using hybrid approach"""
+    async def scrape_all_menus(self, force_all=False):
+        """Scrape menus using smart routing approach"""
         
         for restaurant in self.restaurants:
             print(f"\n🔍 Scraping: {restaurant['name']}")
             
-            # Try traditional first
-            menu = await self.try_traditional_scraping(restaurant)
+            # Check if restaurant should be updated today (unless forced)
+            if not force_all and not self.should_update_today(restaurant):
+                print("   ⏭️ Skipping (not scheduled for today)")
+                continue
             
-            # Fallback to vision if needed
-            if not menu or len(menu) < 3:
-                print("   📸 Using vision fallback...")
-                menu = await self.try_vision_scraping(restaurant)
+            rest_id = restaurant["id"]
+            config = RESTAURANT_CONFIG.get(rest_id, {})
             
-            if menu:
+            # Use smart routing to determine approach
+            menu, method_used, cost = await self.smart_route_scraping(restaurant)
+            
+            # Track statistics
+            self.scraping_stats["total_cost"] += cost
+            if method_used == "traditional":
+                if menu and len(menu) >= 3:
+                    self.scraping_stats["traditional_success"] += 1
+                else:
+                    self.scraping_stats["traditional_failed"] += 1
+            elif method_used == "screenshot":
+                if menu and len(menu) >= 3:
+                    self.scraping_stats["screenshot_success"] += 1
+                else:
+                    self.scraping_stats["screenshot_failed"] += 1
+            
+            if menu and len(menu) >= 3:
                 self.menus[restaurant['id']] = {
                     "restaurant": restaurant['name'],
                     "items": menu,
                     "count": len(menu),
-                    "scraped_at": datetime.now().isoformat()
+                    "method": method_used,
+                    "cost": cost,
+                    "scraped_at": datetime.now().isoformat(),
+                    "config": config
                 }
-                print(f"   ✅ Found {len(menu)} items")
+                print(f"   ✅ Found {len(menu)} items via {method_used} (${cost:.3f})")
             else:
-                print(f"   ❌ No menu found")
+                print(f"   ❌ No menu found via {method_used}")
+    
+    def should_update_today(self, restaurant: Dict) -> bool:
+        """Check if restaurant should be updated today based on configuration"""
+        
+        rest_id = restaurant["id"]
+        config = RESTAURANT_CONFIG.get(rest_id, {"update_frequency": "weekly"})
+        frequency = config.get("update_frequency", "weekly")
+        
+        today = datetime.now().strftime("%A").lower()
+        
+        if frequency == "daily":
+            return True
+        elif frequency == "weekly":
+            # Default to Monday for weekly updates
+            return today == "monday"
+        elif frequency == "static":
+            # Update once a week on Monday
+            return today == "monday"
+        else:
+            return today == "monday"
+    
+    async def smart_route_scraping(self, restaurant: Dict) -> tuple[List[Dict], str, float]:
+        """Smart routing: decide between traditional and screenshot based on site"""
+        
+        rest_id = restaurant["id"]
+        config = RESTAURANT_CONFIG.get(rest_id, {})
+        
+        # Force screenshot for known problem sites
+        if rest_id in REQUIRES_SCREENSHOT or config.get("requires_screenshot", False):
+            print("   📸 Using screenshot (known problem site)")
+            menu = await self.try_vision_scraping(restaurant)
+            return menu or [], "screenshot", 0.10
+        
+        # Try traditional first for other sites
+        print("   🔧 Trying traditional scraping...")
+        menu = await self.try_traditional_scraping(restaurant)
+        
+        # Automatic failure detection: <3 items = failed extraction
+        if not menu or len(menu) < 3:
+            print(f"   ⚠️ Traditional failed ({len(menu) if menu else 0} items), falling back to screenshot")
+            menu = await self.try_vision_scraping(restaurant)
+            return menu or [], "screenshot", 0.10
+        
+        print(f"   ✅ Traditional success ({len(menu)} items)")
+        return menu, "traditional", 0.002
     
     async def try_traditional_scraping(self, restaurant: Dict) -> List[Dict]:
-        """Traditional scraping with ScraperAPI"""
+        """Traditional scraping with ScraperAPI and multiple URL attempts"""
         
         if not restaurant.get("website"):
             return []
         
         url = restaurant["website"]
+        rest_id = restaurant["id"]
+        config = RESTAURANT_CONFIG.get(rest_id, {})
         
-        # Try multiple URL patterns
+        # Get URL override if specified
+        url_override = config.get("url_override")
+        if url_override:
+            if url_override.startswith('/'):
+                url = url.rstrip('/') + url_override
+            else:
+                url = url_override
+        
+        # Try multiple URL patterns in order of likelihood
         urls_to_try = [
             url,
-            f"{url}/meny" if not url.endswith('/') else f"{url}meny",
-            f"{url}/lunch",
-            f"{url}/dagens-lunch"
+            f"{url.rstrip('/')}/meny",
+            f"{url.rstrip('/')}/lunch", 
+            f"{url.rstrip('/')}/dagens-lunch",
+            f"{url.rstrip('/')}/menu",
+            f"{url.rstrip('/')}/mat"
         ]
         
-        for test_url in urls_to_try:
+        # Remove duplicates while preserving order
+        urls_to_try = list(dict.fromkeys(urls_to_try))
+        
+        for i, test_url in enumerate(urls_to_try):
+            print(f"      Trying URL {i+1}/{len(urls_to_try)}: {test_url}")
+            
             params = {
                 'api_key': SCRAPER_API_KEY,
                 'url': test_url,
                 'render': 'true',
-                'country_code': 'se'
+                'country_code': 'se',
+                'wait_for_selector': '.menu, .lunch, main, .content',
+                'wait_for': '2000'  # Wait 2 seconds for JS
             }
             
             try:
                 response = requests.get(
                     'http://api.scraperapi.com',
                     params=params,
-                    timeout=30
+                    timeout=45
                 )
                 
                 if response.status_code == 200:
                     menu = self.extract_menu_with_ai(response.text, restaurant['name'])
-                    if menu:
+                    if menu and len(menu) >= 3:
+                        print(f"      ✅ Success with URL: {test_url}")
                         return menu
-            except:
+                    elif menu:
+                        print(f"      ⚠️ Only {len(menu)} items found, trying next URL")
+                else:
+                    print(f"      ❌ HTTP {response.status_code}")
+            except Exception as e:
+                print(f"      ❌ Error: {str(e)[:50]}")
                 continue
         
         return []
     
     async def try_vision_scraping(self, restaurant: Dict) -> List[Dict]:
-        """Vision scraping with Playwright + GPT-4"""
+        """Vision scraping with Playwright + GPT-4 with enhanced navigation"""
         
         if not restaurant.get("website"):
             return []
         
+        rest_id = restaurant["id"]
+        config = RESTAURANT_CONFIG.get(rest_id, {})
+        
         try:
             async with async_playwright() as p:
                 browser = await p.chromium.launch(headless=True)
-                page = await browser.new_page()
+                context = await browser.new_context(
+                    viewport={'width': 1920, 'height': 1080},
+                    locale='sv-SE'
+                )
+                page = await context.new_page()
                 
-                await page.goto(restaurant["website"], wait_until='networkidle')
+                # Navigate to URL (with override if specified)
+                url = restaurant["website"]
+                url_override = config.get("url_override")
+                if url_override:
+                    if url_override.startswith('/'):
+                        url = url.rstrip('/') + url_override
+                    else:
+                        url = url_override
                 
-                # Try to find and click menu link
-                menu_selectors = ['text=/Meny/i', 'text=/Lunch/i', 'text=/Dagens/i']
+                print(f"      📸 Navigating to: {url}")
+                await page.goto(url, wait_until='networkidle', timeout=30000)
+                await page.wait_for_timeout(3000)  # Wait for JS to render
+                
+                # Try to find and click menu links (multiple strategies)
+                menu_clicked = False
+                menu_selectors = [
+                    'text=/Meny/i', 'text=/Lunch/i', 'text=/Dagens/i', 
+                    'text=/Menu/i', 'text=/Mat/i',
+                    'a[href*="meny"]', 'a[href*="lunch"]', 'a[href*="menu"]',
+                    '[class*="menu"]', '[class*="lunch"]'
+                ]
+                
                 for selector in menu_selectors:
                     try:
-                        await page.click(selector, timeout=2000)
-                        await page.wait_for_timeout(1000)
+                        print(f"      Trying to click: {selector}")
+                        await page.click(selector, timeout=3000)
+                        await page.wait_for_timeout(2000)
+                        menu_clicked = True
+                        print(f"      ✅ Clicked menu link")
                         break
                     except:
                         continue
                 
-                # Take screenshot
+                # Special handling for specific sites
+                if rest_id == "chopchop" and not menu_clicked:
+                    # ChopChop specific: navigate directly to /meny
+                    meny_url = f"{restaurant['website'].rstrip('/')}/meny"
+                    print(f"      📍 ChopChop: Navigating to {meny_url}")
+                    await page.goto(meny_url, wait_until='networkidle')
+                    await page.wait_for_timeout(2000)
+                
+                # Take full page screenshot
+                print(f"      📷 Taking screenshot...")
                 screenshot = await page.screenshot(full_page=True)
                 await browser.close()
                 
                 # Analyze with GPT-4 Vision
-                return self.analyze_screenshot(screenshot, restaurant['name'])
-        except:
+                return self.analyze_screenshot(screenshot, restaurant['name'], config)
+                
+        except Exception as e:
+            print(f"      ❌ Vision scraping error: {str(e)[:100]}")
             return []
     
     def extract_menu_with_ai(self, html: str, restaurant_name: str) -> List[Dict]:
@@ -278,25 +453,47 @@ Return ONLY valid JSON array or empty array if no menu found."""
         except:
             return []
     
-    def analyze_screenshot(self, screenshot: bytes, restaurant_name: str) -> List[Dict]:
-        """Analyze screenshot with GPT-4 Vision"""
+    def analyze_screenshot(self, screenshot: bytes, restaurant_name: str, config: Dict = None) -> List[Dict]:
+        """Analyze screenshot with GPT-4 Vision with enhanced prompts"""
         
         base64_image = base64.b64encode(screenshot).decode('utf-8')
+        config = config or {}
         
         # Special handling for ethnic restaurants
         is_ethnic = any(kw in restaurant_name.lower() 
-                       for kw in ['thai', 'sushi', 'persian', 'indian', 'asian'])
+                       for kw in ['thai', 'sushi', 'persian', 'indian', 'asian', 'bonab'])
         
-        prompt = f"""Extract lunch menu items from this screenshot.
-{"IMPORTANT: Include Swedish descriptions for foreign dish names!" if is_ethnic else ""}
+        # Enhanced prompt based on restaurant type and special instructions
+        special_instructions = config.get("special_instructions", "")
+        
+        base_prompt = f"""Extract lunch menu items from this screenshot of {restaurant_name}.
 
-Return JSON array with:
-- name: dish name
-- description: what it contains (CRITICAL for ethnic food)
-- price: in SEK
-- category: appropriate category
+IMPORTANT REQUIREMENTS:
+- Only include lunch items (40-200 SEK range)
+- Return JSON array with: name, description, price, category
+"""
+        
+        if is_ethnic or "persian" in restaurant_name.lower():
+            base_prompt += """
+CRITICAL FOR ETHNIC RESTAURANTS:
+- Extract BOTH original dish names AND Swedish descriptions
+- Include ingredients/contents in description field
+- Essential for customers to understand what they're ordering"""
+        
+        if "daily" in special_instructions.lower():
+            base_prompt += """
+- Look for daily specials or weekday-specific menus
+- Extract day-specific information if visible"""
+        
+        if special_instructions:
+            base_prompt += f"""
 
-Only include items 40-200 SEK (lunch range)."""
+SPECIAL INSTRUCTIONS: {special_instructions}"""
+        
+        prompt = base_prompt + """
+
+Return ONLY valid JSON array format:
+[{"name": "dish name", "description": "ingredients/description", "price": 125, "category": "Kött/Fisk/Vegetarisk"}]"""
         
         try:
             response = self.openai_client.chat.completions.create(
@@ -347,26 +544,64 @@ Only include items 40-200 SEK (lunch range)."""
             json.dump(all_dishes, f, ensure_ascii=False, indent=2)
     
     def print_summary(self):
-        """Print final summary"""
+        """Print final summary with smart routing statistics"""
         
         total_dishes = sum(len(m["items"]) for m in self.menus.values())
         
         print("\n" + "=" * 60)
-        print("📊 FINAL SUMMARY")
+        print("📊 FINAL SUMMARY - SMART ROUTING RESULTS")
         print("=" * 60)
         print(f"✅ Restaurants scraped: {len(self.menus)}/{len(self.restaurants)}")
         print(f"🍽️ Total dishes found: {total_dishes}")
-        print(f"📁 Results saved to data/")
         
         # Success rate
         success_rate = (len(self.menus) / len(self.restaurants) * 100) if self.restaurants else 0
-        print(f"📈 Success rate: {success_rate:.1f}%")
+        print(f"📈 Overall success rate: {success_rate:.1f}%")
         
-        # Cost estimate
-        traditional = len([1 for m in self.menus.values() if len(m["items"]) > 5])
-        vision = len(self.menus) - traditional
-        cost = (traditional * 0.002) + (vision * 0.10)
-        print(f"💰 Estimated cost: ${cost:.2f}")
+        # Smart routing statistics
+        stats = self.scraping_stats
+        total_attempts = stats["traditional_success"] + stats["traditional_failed"] + stats["screenshot_success"] + stats["screenshot_failed"]
+        
+        if total_attempts > 0:
+            print(f"\n🔧 SCRAPING METHOD BREAKDOWN:")
+            print(f"   Traditional scraping:")
+            print(f"      ✅ Success: {stats['traditional_success']}")
+            print(f"      ❌ Failed:  {stats['traditional_failed']}")
+            if stats['traditional_success'] + stats['traditional_failed'] > 0:
+                trad_rate = stats['traditional_success'] / (stats['traditional_success'] + stats['traditional_failed']) * 100
+                print(f"      📊 Success rate: {trad_rate:.1f}%")
+            
+            print(f"   Screenshot fallback:")
+            print(f"      ✅ Success: {stats['screenshot_success']}")
+            print(f"      ❌ Failed:  {stats['screenshot_failed']}")
+            if stats['screenshot_success'] + stats['screenshot_failed'] > 0:
+                screen_rate = stats['screenshot_success'] / (stats['screenshot_success'] + stats['screenshot_failed']) * 100
+                print(f"      📊 Success rate: {screen_rate:.1f}%")
+        
+        # Cost breakdown
+        print(f"\n💰 COST ANALYSIS:")
+        print(f"   Total cost this run: ${stats['total_cost']:.3f}")
+        print(f"   Average per restaurant: ${stats['total_cost']/max(len(self.menus), 1):.3f}")
+        
+        # Method breakdown in results
+        traditional_count = len([m for m in self.menus.values() if m.get("method") == "traditional"])
+        screenshot_count = len([m for m in self.menus.values() if m.get("method") == "screenshot"])
+        
+        print(f"\n📊 RESULTS BY METHOD:")
+        print(f"   Traditional scraping: {traditional_count} restaurants")
+        print(f"   Screenshot fallback: {screenshot_count} restaurants")
+        
+        # Known problem sites
+        problem_sites = [m for m in self.menus.values() if m.get("config", {}).get("requires_screenshot")]
+        print(f"\n⚠️  Known problem sites handled: {len(problem_sites)}")
+        for menu in problem_sites:
+            print(f"   - {menu['restaurant']} ({menu['method']})")
+        
+        print(f"\n📁 Results saved to data/")
+        
+        # Monthly cost projection
+        monthly_cost = stats['total_cost'] * 4.33  # Average weeks per month
+        print(f"🔮 Projected monthly cost: ${monthly_cost:.2f}")
     
     # Helper methods
     def create_id(self, name: str) -> str:
@@ -399,12 +634,27 @@ Only include items 40-200 SEK (lunch range)."""
 
 # Main execution
 async def main():
+    import sys
+    
+    # Check for --force flag
+    force_all = "--force" in sys.argv or "-f" in sys.argv
+    
     scraper = UnifiedLunchScraper()
-    await scraper.run_full_pipeline()
+    await scraper.run_full_pipeline(force_all)
 
 if __name__ == "__main__":
     # Create data directory
     os.makedirs("data", exist_ok=True)
+    
+    # Show usage if help requested
+    import sys
+    if "--help" in sys.argv or "-h" in sys.argv:
+        print("IST Lunch Unified Scraper")
+        print("Usage:")
+        print("  python unified_scraper.py           # Normal mode (respects schedule)")
+        print("  python unified_scraper.py --force   # Force mode (scrape all restaurants)")
+        print("  python unified_scraper.py -f        # Same as --force")
+        exit(0)
     
     # Run the pipeline
     asyncio.run(main())
